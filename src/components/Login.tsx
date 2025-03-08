@@ -4,7 +4,6 @@ import { signIn } from "next-auth/react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
-import axios from "axios";
 
 const Login = () => {
 const { updateShowLogin,updateShowRegister,showLogin } = useStore();
@@ -37,7 +36,7 @@ const formik = useFormik({
       // setShowLoading(false);
   },
 });
-const { errors, touched, values, handleChange, handleSubmit, resetForm } = formik;
+const { errors, touched, values, handleChange, handleSubmit, resetForm }:any = formik;
   
   const handleSignUpState = () => {
     updateShowLogin(false);
